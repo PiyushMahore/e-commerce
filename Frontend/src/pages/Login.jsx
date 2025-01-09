@@ -42,9 +42,11 @@ function Login() {
                 <div className="mt-10 mx-auto w-full max-w-sm">
                     <div className="space-y-6">
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium leading-6 text-[#fff] ">
-                                Email
-                            </label>
+                            <div className="flex items-center justify-between">
+                                <label htmlFor="email" className="block text-sm font-medium leading-6 text-[#fff] ">
+                                    Email
+                                </label>
+                            </div>
                             <div className="mt-2">
                                 <input
                                     value={email}
@@ -54,7 +56,8 @@ function Login() {
                                     type="email"
                                     required
                                     autoComplete="email"
-                                    className="block w-full rounded-md border-0 py-1.5 px-1 text-[#fff] shadow-sm ring-1 ring-inset ring-[#fff] placeholder:text-[#fff] focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    placeholder='Enter Your Email'
+                                    className="block w-full rounded-md border-0 py-1.5 px-1 text-gray-700 shadow-sm ring-1 ring-inset ring-[#fff] focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
                         </div>
@@ -74,7 +77,8 @@ function Login() {
                                     type="password"
                                     required
                                     autoComplete="current-password"
-                                    className="block w-full rounded-md border-0 py-1.5 p-1 text-[#fff] shadow-sm ring-1 ring-inset ring-[#fff] placeholder:text-[#fff] focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    placeholder='Enter Your Password'
+                                    className="block w-full rounded-md border-0 py-1.5 px-1 text-gray-700 shadow-sm ring-1 ring-inset ring-[#fff] focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
                         </div>

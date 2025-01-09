@@ -2,13 +2,15 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { UserContextProvider } from './context/UserContextProvider.jsx'
-import { createBrowserRouter, Router, RouterProvider } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from './pages/Home.jsx';
 import Cart from './components/Cart.jsx';
 import Orders from './components/Orders.jsx';
 import { CartContextProvider } from './context/CartContextProvider.jsx';
 import Login from './pages/Login.jsx';
 import SignUp from "./pages/SignUp.jsx";
+import PaymentSuccess from './pages/PaymentSuccess.jsx';
+import PaymentFailed from './pages/PaymentFailed.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUp />
+  },
+  {
+    path: "/success",
+    element: <PaymentSuccess />
+  },
+  {
+    path: "/cancel",
+    element: <PaymentFailed />
   }
 ])
 

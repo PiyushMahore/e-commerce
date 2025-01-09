@@ -1,10 +1,12 @@
 import React from 'react';
 import { useUser } from '../context/UserContextProvider';
 import { useNavigate } from 'react-router';
+import { useCart } from '../context/CartContextProvider';
 
 function CardForCart({ img, title, price }) {
-    const navigate = useNavigate()
-    const useAuth = useUser()
+    const useCheckout = useCart();
+    const navigate = useNavigate();
+    const useAuth = useUser();
 
     const checkOut = async () => {
         const isUserActive = await useAuth.getCurrentUser()
@@ -12,7 +14,7 @@ function CardForCart({ img, title, price }) {
             window.alert("Login First")
             navigate('/login')
         } else {
-            console.log(isUserActive)
+            await useCheckout.Checkout(title, price, 1, img)
         }
     }
 
